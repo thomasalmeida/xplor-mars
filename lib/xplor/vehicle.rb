@@ -3,6 +3,9 @@ class Vehicle
   POINTER = ['N', 'E', 'S', 'W'].freeze
 
   def self.get_position_pointer(value)
+    value = value.split(' ')
+
+    [[value[0].to_i, value[1].to_i], value[2].capitalize]
   end
 
   def self.run_commands(commands, position, pointer, height)
