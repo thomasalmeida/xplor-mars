@@ -9,6 +9,18 @@ class Vehicle
   end
 
   def self.run_commands(commands, position, pointer, height)
+    response = []
+
+    commands.each do |command|
+      position, pointer = action(command, position, pointer)
+    end
+
+    if (position.first > height.first || position.last > height.last) || position.first < 0 || position.last < 0
+      alert = "[Your space vehicle is out of range]"
+    end
+
+    response << "#{position.join(' ')} #{pointer} #{alert}"
+    response.join("\n")
   end
 
   def self.action(command, position, pointer)
