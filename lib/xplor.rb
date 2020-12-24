@@ -11,5 +11,7 @@ module Xplor
         parser.on("-i", "--input PATH")
         parser.on("-o", "--output PATH")
       end.parse!(into: params)
+
+      response = Explore.call(params[:input])
   end
 end
