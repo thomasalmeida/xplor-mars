@@ -15,6 +15,9 @@ class Vehicle
   end
 
   def self.move(position, pointer)
+    movement = MOVEMENTS[pointer.to_sym]
+
+    [position.first + movement.first, position.last + movement.last]
   end
 
   def self.rotate(direction, pointer)
