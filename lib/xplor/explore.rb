@@ -1,3 +1,5 @@
+require "xplor/vehicle"
+
 class Explore
   def self.call(input)
     return without_file if input.nil?
