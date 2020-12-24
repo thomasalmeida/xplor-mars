@@ -12,6 +12,10 @@ class Vehicle
   end
 
   def self.action(command, position, pointer)
+    case command
+    when 'M' then [move(position, pointer), pointer]
+    when 'L', 'R' then [position, rotate(command, pointer)]
+    end
   end
 
   def self.move(position, pointer)
