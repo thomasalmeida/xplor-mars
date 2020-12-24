@@ -14,5 +14,14 @@ module Xplor
       end.parse!(into: params)
 
       response = Explore.call(params[:input])
+
+      if params[:output].nil?
+        puts response
+
+        return
+      end
+
+      File.open(params[:output], "w+") { |file| file.write(response + "\n") }
+    end
   end
 end
