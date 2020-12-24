@@ -21,5 +21,16 @@ class Vehicle
   end
 
   def self.rotate(direction, pointer)
+    index = POINTER.find_index(pointer)
+
+    case direction
+    when 'L' then index -= 1
+    when 'R' then index += 1
+    end
+
+    return POINTER.last if index < 0
+    return POINTER.first if index >= POINTER.size
+
+    POINTER[index]
   end
 end
