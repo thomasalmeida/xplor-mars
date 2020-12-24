@@ -1,4 +1,5 @@
 require "optparse"
+require "xplor/explore"
 require "xplor/version"
 
 module Xplor
