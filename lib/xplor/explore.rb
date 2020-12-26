@@ -14,7 +14,7 @@ class Explore
     height = gets.chomp
     height = height.split(' ').map(&:to_i)
 
-    puts 'Define initial positiom and @pointer. Example: 1 2 N'
+    puts 'Define initial positiom and pointer. Example: 1 2 N'
     current = gets.chomp
     current_position, current_pointer = Vehicle.get_position_pointer(current)
 
