@@ -22,6 +22,10 @@ module Xplor
       end
 
       File.open(params[:output], "w+") { |file| file.write(response + "\n") }
+    rescue ArgumentError, OptionParser::InvalidOption => e
+      puts "Error: #{e.message}"
+    rescue StandardError => e
+      puts "Internal error!"
     end
   end
 end

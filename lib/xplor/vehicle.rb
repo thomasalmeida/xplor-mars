@@ -23,6 +23,8 @@ class Vehicle
     response.join("\n")
   end
 
+  private
+
   def self.action(command, position, pointer)
     case command
     when 'M' then [move(position, pointer), pointer]
