@@ -2,27 +2,33 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/xplor`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+Xplor provides a CLI to spacial vehicle explore mars.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Like so:
 
-```ruby
-gem 'xplor'
+```bash
+$ git clone https://github.com/thomasalmeida/xplor
+$ cd xplor
+$ rake build
+$ gem install pkg/xplor-0.1.0.gem
 ```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install xplor
 
 ## Usage
 
-TODO: Write usage instructions here
+Execute `xplor` with -i flag if you have the input file with commands or type the commands in CLI. If you want write file with the output, put -o flag. Otherwise will print in console.
+
+Example:
+
+```bash
+$ xplor -i {path/to/file/input.txt} -o {path/to/file/output.txt}
+```
+## Test
+
+```bash
+$ rake test
+```
 
 ## Development
 
@@ -32,9 +38,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/xplor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/xplor/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/thomasalmeida/xplor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/thomasalmeida/xplor/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## Code of Conduct
 
-Everyone interacting in the Xplor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/xplor/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Xplor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thomasalmeida/xplor/blob/master/CODE_OF_CONDUCT.md).
